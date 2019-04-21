@@ -112,37 +112,31 @@
                     android:id="@+id/textViewDepartTakeOffTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_airplane_takeoff"
+                    android:drawablePadding="@dimen/image_time_margin"
                     android:textAppearance="@style/TimeTextStyle"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_32_start"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDepartTakeOffCity"
                     tools:text="00:20" />
-
-                <ImageView
-                    android:id="@+id/imageViewDepartTakeOff"
-                    android:layout_width="@dimen/image_size"
-                    android:layout_height="@dimen/image_size"
-                    android:layout_marginStart="@dimen/image_time_margin"
-                    android:src="@drawable/ic_airplane_takeoff" />
 
                 <ImageView
                     android:id="@+id/imageViewDepartArrow"
                     android:layout_width="@dimen/image_size"
                     android:layout_height="@dimen/image_size"
                     android:layout_marginStart="@dimen/image_arrow_margin"
-                    android:src="@drawable/ic_trending_flat" />
+                    app:srcCompat="@drawable/ic_trending_flat" />
 
                 <TextView
                     android:id="@+id/textViewDepartLandTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/image_arrow_margin"
+                    android:drawableEnd="@drawable/ic_airplane_landing"
+                    android:drawablePadding="@dimen/image_time_margin"
                     android:textAppearance="@style/TimeTextStyle"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textViewDepartTakeOffTime"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewDepartArrow"
                     tools:text="09:20" />
-
-                <ImageView
-                    android:id="@+id/imageViewDepartLanding"
-                    android:layout_width="@dimen/image_size"
-                    android:layout_height="@dimen/image_size"
-                    android:layout_marginStart="@dimen/image_time_margin"
-                    android:src="@drawable/ic_airplane_landing" />
 
             </LinearLayout>
 
@@ -275,37 +269,31 @@
                     android:id="@+id/textViewReturnTakeOffTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/ic_airplane_takeoff"
+                    android:drawablePadding="@dimen/image_time_margin"
                     android:textAppearance="@style/TimeTextStyle"
-                    tools:text="00:20" />
-
-                <ImageView
-                    android:id="@+id/imageViewReturnTakeOff"
-                    android:layout_width="@dimen/image_size"
-                    android:layout_height="@dimen/image_size"
-                    android:layout_marginStart="@dimen/image_time_margin"
-                    android:src="@drawable/ic_airplane_takeoff" />
+                    app:layout_constraintStart_toStartOf="@+id/guideline_32_start"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewReturnTakeOffCity"
+                    tools:text="05:10" />
 
                 <ImageView
                     android:id="@+id/imageViewReturnArrow"
                     android:layout_width="@dimen/image_size"
                     android:layout_height="@dimen/image_size"
                     android:layout_marginStart="@dimen/image_arrow_margin"
-                    android:src="@drawable/ic_trending_flat" />
+                    app:srcCompat="@drawable/ic_trending_flat" />
 
                 <TextView
                     android:id="@+id/textViewReturnLandTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/image_arrow_margin"
+                    android:drawableEnd="@drawable/ic_airplane_landing"
+                    android:drawablePadding="@dimen/image_time_margin"
                     android:textAppearance="@style/TimeTextStyle"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/textViewReturnTakeOffTime"
+                    app:layout_constraintStart_toEndOf="@+id/imageViewReturnArrow"
                     tools:text="09:20" />
-
-                <ImageView
-                    android:id="@+id/imageViewReturnLanding"
-                    android:layout_width="@dimen/image_size"
-                    android:layout_height="@dimen/image_size"
-                    android:layout_marginStart="@dimen/image_time_margin"
-                    android:src="@drawable/ic_airplane_landing" />
             </LinearLayout>
 
             <LinearLayout

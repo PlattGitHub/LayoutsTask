@@ -136,7 +136,7 @@
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             android:layout_marginStart="@dimen/image_arrow_margin"
-            android:src="@drawable/ic_trending_flat"
+            app:srcCompat="@drawable/ic_trending_flat"
             app:layout_constraintBottom_toBottomOf="@+id/textViewDepartTakeOffTime"
             app:layout_constraintStart_toEndOf="@+id/textViewDepartTakeOffTime"
             app:layout_constraintTop_toTopOf="@+id/textViewDepartTakeOffTime" />
@@ -182,7 +182,7 @@
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             android:layout_marginStart="@dimen/image_arrow_margin"
-            android:src="@drawable/ic_trending_flat"
+            app:srcCompat="@drawable/ic_trending_flat"
             app:layout_constraintBottom_toBottomOf="@+id/textViewReturnTakeOffTime"
             app:layout_constraintStart_toEndOf="@+id/textViewReturnTakeOffTime"
             app:layout_constraintTop_toTopOf="@+id/textViewReturnTakeOffTime" />
