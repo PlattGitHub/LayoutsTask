@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="TitleTextStyle">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/title_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="DepartTextStyle" parent="TitleTextStyle">
+        <item name="android:textColor">@color/colorRed</item>
+    </style>
+
+    <style name="ReturnTextStyle" parent="TitleTextStyle">
+        <item name="android:textColor">@color/colorBlue</item>
+    </style>
+
+    <style name="DateTextStyle">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">@dimen/date_text_size</item>
+    </style>
+
+    <style name="FreeSeatsTextStyle">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">@dimen/free_seats_text_size</item>
+    </style>
+
+    <style name="PriceTextStyle">
+        <item name="android:textColor">@color/colorDarkGrey</item>
+        <item name="android:textSize">@dimen/price_text_size</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CityTextStyle">
+        <item name="android:textColor">@color/colorGreen</item>
+        <item name="android:textSize">@dimen/city_text_size</item>
+    </style>
+
+    <style name="TimeTextStyle">
+        <item name="android:textColor">@color/colorDarkGrey</item>
+        <item name="android:textSize">@dimen/time_text_size</item>
+    </style>
+
+    <style name="DurationTextStyle">
+        <item name="android:textColor">@color/colorDarkGrey</item>
+        <item name="android:textSize">@dimen/duration_text_size</item>
+    </style>
+
+
+</resources>

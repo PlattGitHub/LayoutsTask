@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragmentNotConstraint">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_block"
+            android:layout_marginTop="@dimen/margin_top_head"
+            android:layout_marginEnd="@dimen/margin_start_end_block"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewDepart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/depart"
+                android:textAppearance="@style/DepartTextStyle" />
+
+            <TextView
+                android:id="@+id/textViewDepartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textAppearance="@style/DateTextStyle"
+                tools:text="16 SEP 2019" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_block"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_block"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewDepartFreeSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="@style/FreeSeatsTextStyle"
+                tools:text="Free Seats: 3" />
+
+            <TextView
+                android:id="@+id/textViewDepartPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textAppearance="@style/PriceTextStyle"
+                tools:text="435 BYN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_block"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_block"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewDepartTakeOffCity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAppearance="@style/CityTextStyle"
+                tools:text="MSQ" />
+
+            <ImageView
+                android:id="@+id/imageViewDepartPlane"
+                android:layout_width="@dimen/airplane_image_size"
+                android:layout_height="@dimen/airplane_image_size"
+                android:layout_gravity="center"
+                android:rotation="90"
+                app:srcCompat="@drawable/ic_airplane" />
+
+            <TextView
+                android:id="@+id/textViewDepartLandCity"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAppearance="@style/CityTextStyle"
+                tools:text="FLO" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_block"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_block"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewDepartTakeOffTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TimeTextStyle"
+                    tools:text="00:20" />
+
+                <ImageView
+                    android:id="@+id/imageViewDepartTakeOff"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginStart="@dimen/image_time_margin"
+                    android:src="@drawable/ic_airplane_takeoff" />
+
+                <ImageView
+                    android:id="@+id/imageViewDepartArrow"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginStart="@dimen/image_arrow_margin"
+                    android:src="@drawable/ic_trending_flat" />
+
+                <TextView
+                    android:id="@+id/textViewDepartLandTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/image_arrow_margin"
+                    android:textAppearance="@style/TimeTextStyle"
+                    tools:text="09:20" />
+
+                <ImageView
+                    android:id="@+id/imageViewDepartLanding"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginStart="@dimen/image_time_margin"
+                    android:src="@drawable/ic_airplane_landing" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewDepartDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_clock"
+                    android:drawablePadding="@dimen/image_duration_margin"
+                    android:gravity="end"
+                    android:textAppearance="@style/DurationTextStyle"
+                    tools:text="9:00" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_separator_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/separator_height_size"
+            android:layout_marginStart="@dimen/margin_start_end_separator"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_separator"
+            android:background="@color/colorGrey" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_block"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_block"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewReturn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/return_text"
+                android:textAppearance="@style/ReturnTextStyle" />
+
+            <TextView
+                android:id="@+id/textViewReturnDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textAppearance="@style/DateTextStyle"
+                tools:text="16 SEP 2019" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_block"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_block"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewReturnFreeSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="@style/FreeSeatsTextStyle"
+                tools:text="Free Seats: 5" />
+
+            <TextView
+                android:id="@+id/textViewReturnPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:textAppearance="@style/PriceTextStyle"
+                tools:text="488 BYN" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_block"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_block"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textViewReturnTakeOffCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAppearance="@style/CityTextStyle"
+                tools:text="FLO" />
+
+            <ImageView
+                android:id="@+id/imageViewReturnPlane"
+                android:layout_width="@dimen/airplane_image_size"
+                android:layout_height="@dimen/airplane_image_size"
+                android:layout_gravity="center"
+                android:rotation="90"
+                app:srcCompat="@drawable/ic_airplane" />
+
+            <TextView
+                android:id="@+id/textViewReturnLandCity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textAppearance="@style/CityTextStyle"
+                tools:text="MSQ" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start_end_block"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_block"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewReturnTakeOffTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TimeTextStyle"
+                    tools:text="00:20" />
+
+                <ImageView
+                    android:id="@+id/imageViewReturnTakeOff"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginStart="@dimen/image_time_margin"
+                    android:src="@drawable/ic_airplane_takeoff" />
+
+                <ImageView
+                    android:id="@+id/imageViewReturnArrow"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginStart="@dimen/image_arrow_margin"
+                    android:src="@drawable/ic_trending_flat" />
+
+                <TextView
+                    android:id="@+id/textViewReturnLandTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/image_arrow_margin"
+                    android:textAppearance="@style/TimeTextStyle"
+                    tools:text="09:20" />
+
+                <ImageView
+                    android:id="@+id/imageViewReturnLanding"
+                    android:layout_width="@dimen/image_size"
+                    android:layout_height="@dimen/image_size"
+                    android:layout_marginStart="@dimen/image_time_margin"
+                    android:src="@drawable/ic_airplane_landing" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textViewReturnDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_clock"
+                    android:drawablePadding="@dimen/image_duration_margin"
+                    android:gravity="end"
+                    android:textAppearance="@style/DurationTextStyle"
+                    tools:text="9:00" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_separator_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/separator_height_size"
+            android:layout_marginStart="@dimen/margin_start_end_separator"
+            android:layout_marginTop="@dimen/margin_top_default"
+            android:layout_marginEnd="@dimen/margin_start_end_separator"
+            android:background="@color/colorGrey" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:backgroundTint="@color/colorGreen"
+            app:backgroundTint="@color/colorGreen"
+            app:srcCompat="@drawable/ic_check" />
+    </LinearLayout>
+</ScrollView>

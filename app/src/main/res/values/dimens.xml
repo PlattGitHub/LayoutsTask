@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="guideline_margin_default">24dp</dimen>
+    <dimen name="guideline_margin_small">16dp</dimen>
+    <dimen name="guideline_margin_big">32dp</dimen>
+    <dimen name="guideline_margin_huge">64dp</dimen>
+    <dimen name="image_size">24dp</dimen>
+    <dimen name="image_duration_margin">12dp</dimen>
+    <dimen name="image_arrow_margin">12dp</dimen>
+    <dimen name="image_time_margin">8dp</dimen>
+    <dimen name="duration_text_size">16sp</dimen>
+    <dimen name="time_text_size">18sp</dimen>
+    <dimen name="margin_top_default">16dp</dimen>
+    <dimen name="city_text_size">38sp</dimen>
+    <dimen name="airplane_image_size">50dp</dimen>
+    <dimen name="price_text_size">22sp</dimen>
+    <dimen name="free_seats_text_size">12sp</dimen>
+    <dimen name="date_text_size">20sp</dimen>
+    <dimen name="title_text_size">25sp</dimen>
+    <dimen name="separator_height_size">2dp</dimen>
+    <dimen name="fab_margin">64dp</dimen>
+    <dimen name="activity_buttons_margin">16dp</dimen>
+    <dimen name="activity_buttons_padding">16dp</dimen>
+    <dimen name="margin_top_head">24dp</dimen>
+    <dimen name="margin_start_end_block">32dp</dimen>
+    <dimen name="margin_start_end_separator">16dp</dimen>
+</resources>
