@@ -17,24 +17,16 @@ class MainActivity : AppCompatActivity() {
     private val departData: Flight by lazy { DataGenerator.generateDepartData() }
     private val returnData: Flight by lazy { DataGenerator.generateReturnData() }
 
-    private var constraintFragmentToSet = true
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        if (savedInstanceState != null) {
-            constraintFragmentToSet = savedInstanceState.getBoolean(KEY_LAYOUT)
-        }
-
-        replaceFragment(
-            if (constraintFragmentToSet) {
+        if (savedInstanceState == null) {
+            replaceFragment(
                 FragmentConstraint.newInstance(departData, returnData)
-            } else {
-                FragmentNotConstraint.newInstance(departData, returnData)
-            }
-        )
+            )
+        }
 
         buttonFragment1.setOnClickListener {
             replaceFragment(
@@ -53,16 +45,5 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
             .commit()
-    }
-
-    override fun onSaveInstanceState(outState: Bundle?) {
-        super.onSaveInstanceState(outState)
-        val fragment = supportFragmentManager.findFragmentById(R.id.fragment_container)
-        constraintFragmentToSet = fragment is FragmentConstraint
-        outState?.putBoolean(KEY_LAYOUT, constraintFragmentToSet)
-    }
-
-    private companion object {
-        const val KEY_LAYOUT = "KEY_LAYOUT"
     }
 }
