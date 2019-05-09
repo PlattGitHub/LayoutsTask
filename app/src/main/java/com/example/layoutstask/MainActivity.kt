@@ -1,7 +1,14 @@
 package com.example.layoutstask
 
+import android.content.Intent
+import android.content.SharedPreferences
+import android.content.res.Configuration
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.view.Menu
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -12,15 +19,19 @@ import kotlinx.android.synthetic.main.activity_main.*
  *
  * @author Alexander Gorin
  */
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnThemeChangeListener {
 
     private val departData: Flight by lazy { DataGenerator.generateDepartData() }
     private val returnData: Flight by lazy { DataGenerator.generateReturnData() }
+    private val sharedPreferences: SharedPreferences by lazy {
+        PreferenceManager.getDefaultSharedPreferences(
+            this
+        )
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         if (savedInstanceState == null) {
             replaceFragment(
@@ -45,5 +56,35 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragment_container, fragment)
             .commit()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.settings_menu, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+        return when (item?.itemId) {
+            R.id.settings_action -> {
+                startActivity(Intent(this, SettingsActivity::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
+
+    override fun onThemeChanged() {
+        when (resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK) {
+            Configuration.UI_MODE_NIGHT_NO, Configuration.UI_MODE_NIGHT_UNDEFINED -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                sharedPreferences.edit().putBoolean(PREFS_AUTO_KEY, false).apply()
+                sharedPreferences.edit().putBoolean(PREFS_MODE_KEY, true).apply()
+            }
+            Configuration.UI_MODE_NIGHT_YES -> {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                sharedPreferences.edit().putBoolean(PREFS_MODE_KEY, false).apply()
+            }
+        }
+        recreate()
     }
 }

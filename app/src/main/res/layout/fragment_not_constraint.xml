@@ -9,13 +9,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorBackground"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_start_end_block"
-            android:layout_marginTop="@dimen/margin_top_head"
+            android:layout_marginTop="@dimen/margin_top_default"
             android:layout_marginEnd="@dimen/margin_start_end_block"
             android:orientation="horizontal">
 
@@ -24,7 +25,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/depart"
-                android:textAppearance="@style/DepartTextStyle" />
+                android:textAppearance="@style/TitleTextStyle"
+                android:textColor="@color/colorRed" />
 
             <TextView
                 android:id="@+id/textViewDepartDate"
@@ -165,7 +167,7 @@
             android:layout_marginStart="@dimen/margin_start_end_separator"
             android:layout_marginTop="@dimen/margin_top_default"
             android:layout_marginEnd="@dimen/margin_start_end_separator"
-            android:background="@color/colorGrey" />
+            android:background="@color/colorText" />
 
 
         <LinearLayout
@@ -181,7 +183,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/return_text"
-                android:textAppearance="@style/ReturnTextStyle" />
+                android:textAppearance="@style/TitleTextStyle"
+                android:textColor="@color/colorBlue" />
 
             <TextView
                 android:id="@+id/textViewReturnDate"
@@ -321,7 +324,7 @@
             android:layout_marginStart="@dimen/margin_start_end_separator"
             android:layout_marginTop="@dimen/margin_top_default"
             android:layout_marginEnd="@dimen/margin_start_end_separator"
-            android:background="@color/colorGrey" />
+            android:background="@color/colorText" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
@@ -330,8 +333,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="@dimen/fab_margin"
             android:layout_marginBottom="@dimen/fab_margin"
-            android:backgroundTint="@color/colorGreen"
-            app:backgroundTint="@color/colorGreen"
+            android:backgroundTint="@color/colorPrimary"
+            app:backgroundTint="@color/colorPrimary"
             app:srcCompat="@drawable/ic_check" />
     </LinearLayout>
 </ScrollView>

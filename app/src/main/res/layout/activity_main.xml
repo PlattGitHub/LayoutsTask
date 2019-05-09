@@ -18,6 +18,7 @@
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/activity_buttons_margin"
         app:layout_constraintBottom_toTopOf="@+id/buttonFragment1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,27 +28,23 @@
 
     <Button
         android:id="@+id/buttonFragment1"
+        style="@style/FragmentButtonsStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/activity_buttons_margin"
         android:layout_marginBottom="@dimen/activity_buttons_margin"
-        android:backgroundTint="@color/colorGreen"
-        android:padding="@dimen/activity_buttons_padding"
         android:text="@string/fragment_1"
-        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline_center" />
 
     <Button
+        style="@style/FragmentButtonsStyle"
         android:id="@+id/buttonFragment2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/activity_buttons_margin"
         android:layout_marginBottom="@dimen/activity_buttons_margin"
-        android:backgroundTint="@color/colorGreen"
-        android:padding="@dimen/activity_buttons_padding"
         android:text="@string/fragment_2"
-        android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline_center" />
 

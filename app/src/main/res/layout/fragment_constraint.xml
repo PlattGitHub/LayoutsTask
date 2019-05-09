@@ -12,11 +12,11 @@
         tools:context=".FragmentConstraint">
 
         <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/guideline_24_top"
+            android:id="@+id/guideline_16_top"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintGuide_begin="@dimen/guideline_margin_default" />
+            app:layout_constraintGuide_begin="@dimen/guideline_margin_small" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_16_end"
@@ -51,9 +51,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/depart"
-            android:textAppearance="@style/DepartTextStyle"
+            android:textAppearance="@style/TitleTextStyle"
+            android:textColor="@color/colorRed"
             app:layout_constraintStart_toStartOf="@+id/guideline_32_start"
-            app:layout_constraintTop_toTopOf="@+id/guideline_24_top" />
+            app:layout_constraintTop_toTopOf="@+id/guideline_16_top" />
 
         <TextView
             android:id="@+id/textViewDepartDate"
@@ -103,10 +104,10 @@
             android:layout_height="@dimen/airplane_image_size"
             android:layout_marginTop="@dimen/margin_top_default"
             android:rotation="90"
-            app:srcCompat="@drawable/ic_airplane"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewDepartPrice" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewDepartPrice"
+            app:srcCompat="@drawable/ic_airplane" />
 
         <TextView
             android:id="@+id/textViewDepartLandCity"
@@ -136,10 +137,10 @@
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             android:layout_marginStart="@dimen/image_arrow_margin"
-            app:srcCompat="@drawable/ic_trending_flat"
             app:layout_constraintBottom_toBottomOf="@+id/textViewDepartTakeOffTime"
             app:layout_constraintStart_toEndOf="@+id/textViewDepartTakeOffTime"
-            app:layout_constraintTop_toTopOf="@+id/textViewDepartTakeOffTime" />
+            app:layout_constraintTop_toTopOf="@+id/textViewDepartTakeOffTime"
+            app:srcCompat="@drawable/ic_trending_flat" />
 
         <TextView
             android:id="@+id/textViewDepartLandTime"
@@ -171,7 +172,7 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/separator_height_size"
             android:layout_marginTop="@dimen/margin_top_default"
-            android:background="@color/colorGrey"
+            android:background="@color/colorText"
             app:layout_constraintEnd_toStartOf="@+id/guideline_16_end"
             app:layout_constraintStart_toStartOf="@+id/guideline_16_start"
             app:layout_constraintTop_toBottomOf="@+id/textViewDepartTakeOffTime" />
@@ -182,10 +183,10 @@
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             android:layout_marginStart="@dimen/image_arrow_margin"
-            app:srcCompat="@drawable/ic_trending_flat"
             app:layout_constraintBottom_toBottomOf="@+id/textViewReturnTakeOffTime"
             app:layout_constraintStart_toEndOf="@+id/textViewReturnTakeOffTime"
-            app:layout_constraintTop_toTopOf="@+id/textViewReturnTakeOffTime" />
+            app:layout_constraintTop_toTopOf="@+id/textViewReturnTakeOffTime"
+            app:srcCompat="@drawable/ic_trending_flat" />
 
         <TextView
             android:id="@+id/textViewReturnDuration"
@@ -251,10 +252,10 @@
             android:layout_height="@dimen/airplane_image_size"
             android:layout_marginTop="@dimen/margin_top_default"
             android:rotation="90"
-            app:srcCompat="@drawable/ic_airplane"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textViewReturnPrice" />
+            app:layout_constraintTop_toBottomOf="@+id/textViewReturnPrice"
+            app:srcCompat="@drawable/ic_airplane" />
 
         <TextView
             android:id="@+id/textViewReturnPrice"
@@ -291,7 +292,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_top_default"
             android:text="@string/return_text"
-            android:textAppearance="@style/ReturnTextStyle"
+            android:textAppearance="@style/TitleTextStyle"
+            android:textColor="@color/colorBlue"
             app:layout_constraintStart_toStartOf="@+id/guideline_32_start"
             app:layout_constraintTop_toBottomOf="@+id/view_separator_1" />
 
@@ -300,7 +302,7 @@
             android:layout_width="0dp"
             android:layout_height="@dimen/separator_height_size"
             android:layout_marginTop="@dimen/margin_top_default"
-            android:background="@color/colorGrey"
+            android:background="@color/colorText"
             app:layout_constraintEnd_toStartOf="@+id/guideline_16_end"
             app:layout_constraintStart_toStartOf="@+id/guideline_16_start"
             app:layout_constraintTop_toBottomOf="@+id/textViewReturnTakeOffTime" />
@@ -311,12 +313,12 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/fab_margin"
             android:layout_marginBottom="@dimen/fab_margin"
-            android:backgroundTint="@color/colorGreen"
-            app:srcCompat="@drawable/ic_check"
-            app:backgroundTint="@color/colorGreen"
+            android:backgroundTint="@color/colorPrimary"
+            app:backgroundTint="@color/colorPrimary"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/guideline_32_end"
             app:layout_constraintStart_toStartOf="@+id/guideline_32_start"
-            app:layout_constraintTop_toBottomOf="@+id/view_separator_2" />
+            app:layout_constraintTop_toBottomOf="@+id/view_separator_2"
+            app:srcCompat="@drawable/ic_check" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
