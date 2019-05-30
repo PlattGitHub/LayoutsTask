@@ -1,4 +1,4 @@
-package com.example.layoutstask
+package com.example.layoutstask.ui
 
 import android.content.Context
 import android.os.Bundle
@@ -6,14 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import kotlinx.android.synthetic.main.fragment_not_constraint.view.*
+import com.example.layoutstask.model.Flight
+import com.example.layoutstask.utils.OnThemeChangeListener
+import com.example.layoutstask.R
+import kotlinx.android.synthetic.main.fragment_constraint.view.*
 
 /**
- * A simple [Fragment] subclass based on LinearLayout.
+ * A simple [Fragment] subclass based on ConstraintLayout.
  *
  * @author Alexander Gorin
  */
-class FragmentNotConstraint : Fragment() {
+class FragmentConstraint : Fragment() {
 
     var onThemeChangeListener: OnThemeChangeListener? = null
 
@@ -30,7 +33,7 @@ class FragmentNotConstraint : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_not_constraint, container, false)
+        return inflater.inflate(R.layout.fragment_constraint, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -72,7 +75,7 @@ class FragmentNotConstraint : Fragment() {
     }
 
     companion object {
-        fun newInstance(departData: Flight, returnData: Flight) = FragmentNotConstraint().apply {
+        fun newInstance(departData: Flight, returnData: Flight) = FragmentConstraint().apply {
             arguments = Bundle().apply {
                 putParcelable(DEPART_DATA, departData)
                 putParcelable(RETURN_DATA, returnData)

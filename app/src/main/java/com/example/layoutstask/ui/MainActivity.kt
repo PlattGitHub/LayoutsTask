@@ -1,4 +1,4 @@
-package com.example.layoutstask
+package com.example.layoutstask.ui
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -10,6 +10,12 @@ import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
+import com.example.layoutstask.*
+import com.example.layoutstask.model.Flight
+import com.example.layoutstask.utils.DataGenerator
+import com.example.layoutstask.utils.OnThemeChangeListener
+import com.example.layoutstask.utils.PREFS_AUTO_KEY
+import com.example.layoutstask.utils.PREFS_MODE_KEY
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -35,19 +41,28 @@ class MainActivity : AppCompatActivity(), OnThemeChangeListener {
 
         if (savedInstanceState == null) {
             replaceFragment(
-                FragmentConstraint.newInstance(departData, returnData)
+                FragmentConstraint.newInstance(
+                    departData,
+                    returnData
+                )
             )
         }
 
         buttonFragment1.setOnClickListener {
             replaceFragment(
-                FragmentConstraint.newInstance(departData, returnData)
+                FragmentConstraint.newInstance(
+                    departData,
+                    returnData
+                )
             )
         }
 
         buttonFragment2.setOnClickListener {
             replaceFragment(
-                FragmentNotConstraint.newInstance(departData, returnData)
+                FragmentNotConstraint.newInstance(
+                    departData,
+                    returnData
+                )
             )
         }
     }

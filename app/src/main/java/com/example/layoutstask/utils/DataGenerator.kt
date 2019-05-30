@@ -1,4 +1,6 @@
-package com.example.layoutstask
+package com.example.layoutstask.utils
+
+import com.example.layoutstask.model.Flight
 
 /**
  * Singleton for generating flight information.

@@ -5,7 +5,7 @@
 
     <fragment
         android:id="@+id/preferences_fragment"
-        android:name="com.example.layoutstask.SettingsActivity$SettingsFragment"
+        android:name="com.example.layoutstask.ui.SettingsActivity$SettingsFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 </FrameLayout>

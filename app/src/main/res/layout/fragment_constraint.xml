@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/colorBackground"
-        tools:context=".FragmentConstraint">
+        tools:context=".ui.FragmentConstraint">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline_16_top"

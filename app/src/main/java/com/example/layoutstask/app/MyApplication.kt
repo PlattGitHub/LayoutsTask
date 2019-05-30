@@ -1,8 +1,10 @@
-package com.example.layoutstask
+package com.example.layoutstask.app
 
 import android.app.Application
 import android.preference.PreferenceManager
 import androidx.appcompat.app.AppCompatDelegate
+import com.example.layoutstask.utils.PREFS_AUTO_KEY
+import com.example.layoutstask.utils.PREFS_MODE_KEY
 
 /**
  * Application class that is used to set Default Night mode before all Activities being created.

@@ -1,11 +1,16 @@
-package com.example.layoutstask
+package com.example.layoutstask.ui
 
+import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.preference.PreferenceFragmentCompat
 import androidx.preference.PreferenceManager
+import com.example.layoutstask.R
+import com.example.layoutstask.ui.SettingsActivity.SettingsFragment
+import com.example.layoutstask.utils.PREFS_AUTO_KEY
+import com.example.layoutstask.utils.PREFS_MODE_KEY
 
 /**
  * Settings activity that holds [SettingsFragment] PreferenceFragmentCompat subclass.
@@ -54,6 +59,13 @@ class SettingsActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         sharedPreferences.unregisterOnSharedPreferenceChangeListener(listener)
+    }
+
+    override fun onBackPressed() {
+        startActivity(Intent(this, MainActivity::class.java).apply {
+            addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+        })
+        super.onBackPressed()
     }
 
     class SettingsFragment : PreferenceFragmentCompat() {

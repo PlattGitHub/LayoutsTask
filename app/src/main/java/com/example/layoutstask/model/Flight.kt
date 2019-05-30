@@ -1,4 +1,4 @@
-package com.example.layoutstask
+package com.example.layoutstask.model
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
